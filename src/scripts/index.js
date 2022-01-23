@@ -55,21 +55,30 @@ for (; i < 12; i++) {
 
 //?Operators
 //!Equality operators
-
+//** == */ OR !=
+//** === */ OR !== Best Practice to use this
 
 //!Unary operators
-
+//** ++var1 */ OR --var1 */
+//** var1++ */ OR var1-- */
 
 //!Logical operators
-
+//** && */ OR || */
 
 //!Relational operators
-
-
+//** <  OR >  OR <=  OR >=
+//**Upper case letters are lower than lowercase letters */
 //!Conditional operators
-
+let x = 10;
+var result = x > 0 ? "positive" : "non-positive";
+console.log(result);
 
 //!Assignment operators
-
+let var1 = 10;
+var1+=10;
+var1%=2;
+var1<<=1;
+console.log(var1);
 
 //!Operator precedence
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
