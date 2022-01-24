@@ -82,3 +82,105 @@ console.log(var1);
 
 //!Operator precedence
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table
+
+
+//?Functions and Scope
+
+//!Function scope
+//* function startCar(carId){
+//*   let message = "Starting...";
+//* }
+//* console.log(message); //Error(Reference error)
+
+//!Block scope
+//* if(5==5){
+//*   let message = 'Equal';
+//* }
+//* console.log('Message'); //Error(Reference error)
+
+//!IIFE's
+//*Immediately Invoked Function Expression
+let app = (function(){
+  console.log("Hello World!");
+  return { };
+})();
+console.log(app);
+
+//!Closures
+//*A closure is a function that has access to the parent scope, even after the parent function has closed.
+let app2 = (function(){
+  let carId = 123;
+  let getId = function(){
+    return carId;
+  };
+  return{
+    getId: getId
+  };
+})();
+console.log(app2.getId());
+
+//!this Keyword
+//*this is a keyword that refers to the current object.
+let fn = {
+  carId: 123,
+  getId: function(){
+    return this.carId;
+  }
+};
+console.log(fn.getId());
+
+//!call, apply and bind
+//*call and apply purpose is to change the value of this.
+let o = {
+  carId: 123,
+  getId: function(){
+    return this.carId;
+  }
+};
+let newCar = { carId: 456};
+console.log(o.getId.call(newCar)); //*456
+//*apply is similar to call but it takes an array as an argument
+let o2 = {
+  carId: 123,
+  getId: function(prefix){
+    return prefix + this.carId;
+  }
+};
+let oldCar = { carId: 456};
+console.log(o2.getId.apply(oldCar, ['ID: ']));
+//*bind is creating a copy of the function but with the this value set to the object passed as an argument
+let o3 = {
+  carId: 123,
+  getId: function(){
+    return this.carId;
+  }
+};
+let mediumCar = { carId: 456};
+let newFn = o3.getId.bind(mediumCar);
+console.log(newFn()); //*456
+
+//!Arrow functions
+//*Arrow functions do not have their own "this" value. They are always bound to the this value of their parent function.
+let getId = (prop) => prop + 123;
+console.log(getId('ID: '));
+
+//!Default parameters
+let trackCar = function(carId, city='NY'){
+  console.log(`Tracking ${carId} in ${city}`);
+};
+console.log(trackCar(123));
+
+//?Objects and Arrays
+//!Constructor functions
+
+
+//!Prototypes
+
+
+//!Expanding Objects using Prototypes
+
+
+//!Javascript Object Notation - JSON
+
+
+//!Array Iteration
