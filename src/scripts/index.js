@@ -172,15 +172,57 @@ console.log(trackCar(123));
 
 //?Objects and Arrays
 //!Constructor functions
-
+function Car(id){
+  this.carId = id;
+}
+let fruit = new Car(123);
+console.log(fruit.carId);
 
 //!Prototypes
-
-
+//*Prototypes are shared among all instances of a constructor function.
+function Vehicle(id){
+  this.carId = id;
+}
+Vehicle.prototype.start = function(){
+  console.log(`Starting ${this.carId}`);
+};
+let veh = new Vehicle(123);
+veh.start();
 //!Expanding Objects using Prototypes
-
+String.prototype.hello = function(){
+  return this.toString() + ' Hello';
+};
+console.log('Hello'.hello());
 
 //!Javascript Object Notation - JSON
-
+//*Convert to JSON
+let student = {
+  id:2093,
+  name: "John",
+  age: 30
+};
+console.log(JSON.stringify(student));
+//*Convert Array to JSON
+let cars = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
+console.log(JSON.stringify(cars));
+//*Parsing JSON
+let jsonString = '{"id":2093,"name":"John","age":30}';
+let parsed = JSON.parse(jsonString);
+console.log(parsed);
 
 //!Array Iteration
+let newCars = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
+newCars.forEach(car => console.log(car));
+newCars.forEach((car, index) => console.log(index, car));
+//*Array filtering
+let newCars2 = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
+let filtered = newCars2.filter(car => car.id > 1);
+console.log(filtered);
+//*Array Testing
+let newCars3 = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
+let found = newCars3.every(car => car.id > 1);
+console.log(found);
+//*Array Finding
+let newCars4 = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
+let found2 = newCars4.find(car => car.id > 1);
+console.log(found2);
