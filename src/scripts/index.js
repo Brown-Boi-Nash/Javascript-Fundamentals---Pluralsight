@@ -1,3 +1,5 @@
+import { Water } from "./models/water";
+
 console.log("Hello World!");
 //?Language features
 //!Constants
@@ -226,3 +228,58 @@ console.log(found);
 let newCars4 = [  {id: 1, name: "Volvo"}, {id: 2, name: "Saab"}];
 let found2 = newCars4.find(car => car.id > 1);
 console.log(found2);
+
+//?Classes and Modules
+//!Classes Basics
+//*Classes are a syntactic sugar for creating objects.
+class Third{
+
+}
+let third = new Third();
+console.log(third);
+//!Constructors and Properties
+// class Car{
+//   constructor(id){
+//     this.carId = id;
+//   }
+// }
+// let car = new Car(123);
+// console.log(car.id);
+//!Methods
+//class with methods
+// class Car{
+//   constructor(id){
+//     this.carId = id;
+//   }
+//   start(){
+//     console.log(`Starting ${this.carId}`);
+//   }
+// }
+// let car = new Car(123);
+// car.start();
+//!Inheritance
+class Travel{
+  constructor(){
+    this.type = 'land';
+  }
+  start(){
+    return `Starting ${this.type}`;
+  }
+}
+class Land extends Travel{
+  constructor(){
+    super();
+    this.type = 'land';
+  }
+  start(){
+    return super.start() + '...';
+  }
+}
+let land = new Land();
+console.log(land.start());
+//!Creating a module
+//*Modules are a way to organize code.
+//New file created in models folder
+//!Importing modules
+let water = new Water(123);
+console.log(water);
