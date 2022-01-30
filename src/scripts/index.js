@@ -381,3 +381,29 @@ clearInterval(intervalId);
 //   error => console.log('Error: ', error)
 // )
 
+//?Forms
+//!Preventing Form Fields
+// let form = document.getElementById('my-form');
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   console.log('Form Submitted'); 
+// });
+//!Accessing form fields
+// let form = document.getElementById('my-form');
+// form.addEventListener('submit', (e) => {
+//   let user = form.elements['user'];
+//   console.log(user.value);
+//  e.preventDefault();
+// });
+//!Showing Validation Errors
+// let user = form.elements['user'];
+// let userError = document.getElementById('user-error');
+// if(user.value.length < 4){
+//   userError.textContent = 'Username must be at least 4 characters';
+//   userError.style.color = 'red';
+//   userError.style.borderColor = 'red';
+//   user.focus();
+//   e.preventDefault();
+// }
+//!Posting from Javascript
+
