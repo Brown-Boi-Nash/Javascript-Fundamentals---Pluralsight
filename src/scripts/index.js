@@ -314,3 +314,42 @@ clearInterval(intervalId);
 //!Modifying DOM elements
 // let element = document.getElementById('my-element');
 // element.textContent = 'Hello World';
+
+//?Promises and Error handling
+//!Error Handling using try/catch
+// try{
+//   let x = 1;
+//   let y = 0;
+//   let z = x/y;
+// }catch(e){
+//   console.log(e);
+// }
+//!finally
+// try{
+//   let x = 1;
+//   let y = 0;
+//   let z = x/y;
+// }catch(e){
+//   console.log(e);
+// }finally{
+//   console.log('Finally');
+// }
+//!Developer defined errors
+// try{
+//   throw new Error('My Error');
+// }
+// catch(e){
+//   console.log(e);
+// }
+//!Creating a Promise
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'Done');
+// });
+//!Settling a Promise
+// let promise = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'Done');
+// });
+// promise.then(
+//  value => console.log(value),
+//  error => console.log(error)
+//);
