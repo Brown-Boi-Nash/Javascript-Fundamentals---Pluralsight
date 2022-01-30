@@ -283,3 +283,34 @@ console.log(land.start());
 //!Importing modules
 let water = new Water(123);
 console.log(water);
+
+//?Programming the BOM and DOM
+//!The window object
+//document, location, console, innerHeight, innerWidth, pageXOffset, pageYOffser =>Properties
+//alert, confirm, back => Methods
+//(not common) => Events
+//!Timers
+let timeoutId = setTimeout(() => {
+  console.log('Timeout');
+}, 3000);
+clearTimeout(timeoutId);
+
+let intervalId = setInterval(() => {
+  console.log('Interval');
+}, 3000);
+clearInterval(intervalId);
+//!The location object
+//Properties => href, host, hostname, origin, pathname, port, protocol, search
+//Methods => reload, replace, assign, assign(url)
+//Events => (not common)
+//!The document object
+//Properties => body, forms, links
+//Methods => createElement(), createEvent(), getElementById(), getElementsByClassName()
+//Events => onload, onClick, onkeypress
+//!Selecting DOM elements
+//document.getElementById()
+//document.getElementsByClassName()
+//document.getElementsByTagName()
+//!Modifying DOM elements
+// let element = document.getElementById('my-element');
+// element.textContent = 'Hello World';
