@@ -353,3 +353,31 @@ clearInterval(intervalId);
 //  value => console.log(value),
 //  error => console.log(error)
 //);
+//?Data Access Using HTTP
+//!HTTP requests using XHR
+// let xhttp = new XMLHttpRequest();
+// xhttp.onreadystatechange = function(){
+//   if(this.readyState == 4 && this.status == 200){
+//     console.log(this.responseText);
+//   }
+// };
+// xhttp.open("GET", "http://myid.mockapi.io/api/v1/users", true);
+// xhttp.send();
+//!HTTP requests using jQuery
+// import $ from 'jquery';
+// let promise = $.get("http://myid.mockapi.io/api/v1/users");
+// promise.then(
+//   data => console.log('Data: ', data),
+//   error => console.log('Error: ', error)
+// )
+//!HTTP POST using jQuery
+// import $ from 'jquery';
+// let promise = $.post("http://myid.mockapi.io/api/v1/users", {
+//   name: 'John',
+//   email: 'xyz@text.com'
+// });
+// promise.then(
+//   data => console.log('Data: ', data),
+//   error => console.log('Error: ', error)
+// )
+
